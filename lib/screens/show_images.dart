@@ -53,10 +53,6 @@ class _ShowImageListScreenState extends State<ShowImageListScreen> {
         },
         child: const Icon(Icons.add),
       ),
-      // appBar: AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   title: const Text('Image List'),
-      // ),
       body: BlocBuilder<ImageBloc, ImageState>(
         builder: (context, state) {
           if (state is ImageLoadedState || state is ImageUploadedState) {
@@ -78,7 +74,6 @@ class _ShowImageListScreenState extends State<ShowImageListScreen> {
               allowImplicitScrolling: true,
               pageSnapping: true,
               gaplessPlayback: true,
-              enableRotation: true,
               pageController: _pageController,
               onPageChanged: (index) {
                 // Handle page change event
