@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>501525226595-dlgqm2o51rnntk4934ovd14peipn1hqe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.501525226595-dlgqm2o51rnntk4934ovd14peipn1hqe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBTKn03GFlmt1gBRzYdFMohwG3JxZxrYcQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>501525226595</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.cacheImage.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>bloc-fire-auth</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bloc-fire-auth.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:501525226595:ios:3e1d1298838c5da9be4456</string>
+	<key>DATABASE_URL</key>
+	<string>https://bloc-fire-auth-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

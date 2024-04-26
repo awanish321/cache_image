@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "382862372221",
+    "firebase_url": "https://cache-images-default-rtdb.firebaseio.com",
+    "project_id": "cache-images",
+    "storage_bucket": "cache-images.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382862372221:android:9d8253a25f7e365b60b014",
+        "android_client_info": {
+          "package_name": "com.example.cache_image"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8p93sc7OURKL3xJws1v-OpUe-vGn9Re8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
