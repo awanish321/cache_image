@@ -53,31 +53,55 @@ class _ShowImageListScreenState extends State<ShowImageListScreen> {
         },
         child: const Icon(Icons.add),
       ),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent.withOpacity(0.5),
+      ),
+      extendBodyBehindAppBar: true,
       body: BlocBuilder<ImageBloc, ImageState>(
         builder: (context, state) {
           if (state is ImageLoadedState || state is ImageUploadedState) {
             final List<ImageModel> images =
             state is ImageLoadedState ? state.images : (state as ImageUploadedState).images;
+
             return PhotoViewGallery(
+              backgroundDecoration: const BoxDecoration(
+                color: Colors.white,
+              ),
               scrollDirection: Axis.vertical,
               wantKeepAlive: true,
               pageOptions: images
-                  .map(
-                    (image) => PhotoViewGalleryPageOptions(
+                  .asMap()
+                  .map((index, image) {
+                final pageOption = PhotoViewGalleryPageOptions(
                   imageProvider: CachedNetworkImageProvider(image.url),
-                  minScale: PhotoViewComputedScale.contained,
+                  minScale: PhotoViewComputedScale.covered,
                   maxScale: PhotoViewComputedScale.covered * 2,
+                );
+                return MapEntry(
+                  index,
+                  index == 0
+                      ? PhotoViewGalleryPageOptions.customChild(
+                    child: Container(
+                      padding: const EdgeInsets.only(top: 85),
+                      child: Image(
+                        image: CachedNetworkImageProvider(image.url),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    minScale: PhotoViewComputedScale.covered,
+                    maxScale: PhotoViewComputedScale.covered * 2,
+                  )
+                      : pageOption,
 
-                ),
-              )
+                );
+              })
+                  .values
                   .toList(),
               allowImplicitScrolling: true,
               pageSnapping: true,
               gaplessPlayback: true,
               pageController: _pageController,
-              onPageChanged: (index) {
-                // Handle page change event
-              },
+              onPageChanged: (index) {},
             );
           } else if (state is ImageErrorState) {
             return Center(
@@ -91,4 +115,3 @@ class _ShowImageListScreenState extends State<ShowImageListScreen> {
     );
   }
 }
-

@@ -12,7 +12,7 @@ class CacheService {
     final cacheManager = CacheManager(
       Config(
         key,
-        stalePeriod: const Duration(days: 1),
+        stalePeriod: const Duration(days: 365),
         maxNrOfCacheObjects: 100,
       ),
     );
@@ -32,7 +32,7 @@ class CacheService {
     final cacheManager = CacheManager(
       Config(
         key,
-        stalePeriod: const Duration(days: 1),
+        stalePeriod: const Duration(days: 365),
         maxNrOfCacheObjects: 100,
       ),
     );
